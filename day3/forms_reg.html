@@ -13,48 +13,53 @@
         <fieldset>
             <legend>Личные данные</legend>
             <input type="text" name="surname" required pattern="[А-Яа-яЁё]{1,25}" maxlength="25" autofocus
-                placeholder="Фамилия"><br>
-            <input type="text" name="name" required pattern="[А-Яа-яЁё]{1,20}" maxlength="20" placeholder="Имя"><br>
+                placeholder="Фамилия"> text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус
+            на данном поле)<br>
+            <input type="text" name="name" required pattern="[А-Яа-яЁё]{1,20}" maxlength="20" placeholder="Имя">text:
+            Только кириллица, без пробелов, длина поля 20, обязательное поле)<br>
             <input type="text" name="patronymic" required pattern="[А-Яа-яЁё]{1,24}" maxlength="24"
-                placeholder="Отчество"><br>
+                placeholder="Отчество">text: Только кириллица, без пробелов, длина поля 24, обязательное поле)<br>
 
 
             <fieldset>
                 <legend>Паспортные данные</legend>
-                <label>Серия: <input type="text" name="passport_series" required pattern="[A-Z]{2}"
-                        maxlength="2"></label><br>
-                <label>Номер: <input type="text" name="passport_number" required pattern="\d{7}"
-                        maxlength="7"></label><br>
+                text: Серия только заглавные две латинские буквы с длиной 2 и максимальным количеством символов 2,
+                количество букв не менее 2, обязательное поле <br>
+                text: Номер паспорта только цифры с длиной 7 и максимальным количеством символов 7, количество цифр не
+                менее 7, обязательное поле
+                <input type="text" name="passport_series" required pattern="[A-Z]{2}" maxlength="2" placeholder="AA"
+                    style="width: 20px;">
+                <input type="text" name="passport_number" required pattern="\d{7}" maxlength="7" placeholder="1234567">
+                <br>
             </fieldset>
 
             <fieldset>
                 <legend>Дата рождения</legend>
-                <label>Год: <input type="number" name="birth_year" required min="1900" max="2100" step="1"></label>
-                <label>Месяц:
-                    <select name="birth_month">
-                        <option>Январь</option>
-                        <option>Февраль</option>
-                        <option>Март</option>
-                        <option>Апрель</option>
-                        <option>Май</option>
-                        <option>Июнь</option>
-                        <option>Июль</option>
-                        <option>Август</option>
-                        <option>Сентябрь</option>
-                        <option>Октябрь</option>
-                        <option>Ноябрь</option>
-                        <option>Декабрь</option>
-                    </select>
-                </label>
+                <input type="number" name="birth_year" required min="1900" max="2100" step="1" placeholder="2000"> text:
+                Год рождения 4-е цифры <br>
+                <select name="birth_month">
+                    <option>Январь</option>
+                    <option>Февраль</option>
+                    <option>Март</option>
+                    <option>Апрель</option>
+                    <option>Май</option>
+                    <option>Июнь</option>
+                    <option>Июль</option>
+                    <option>Август</option>
+                    <option>Сентябрь</option>
+                    <option>Октябрь</option>
+                    <option>Ноябрь</option>
+                    <option>Декабрь</option>
+                </select> select: Месяц рождения <br>
+                <input type="number" name="birth_date" required min="1" max="31" step="1"> number: Диапазон от 1 до 31 с
+                шагом 1
             </fieldset>
-            <label>Национальность:
-                <select name="nationality" required>
-                    <option value="РБ">РБ</option>
-                    <option value="Россия">Россия</option>
-                    <option value="Украина">Украина</option>
-                    <option value="Казахстан">Казахстан</option>
-                </select>
-            </label><br>
+            <select name="nationality" required>
+                <option value="РБ">РБ</option>
+                <option value="Россия">Россия</option>
+                <option value="Украина">Украина</option>
+                <option value="Казахстан">Казахстан</option>
+            </select> (Национальность выбор одного значения из списка, обязательное поле)<br>
             <label>Адрес: <br> <textarea name="address" rows="3" cols="30"></textarea></label>
         </fieldset>
 
@@ -69,7 +74,8 @@
             </fieldset>
 
             <fieldset>
-                <legend>Домашние животные</legend>
+                <legend>Домашние животные (возможность выбора нескольких вариантов):</legend>
+                array: select multiple <br>
                 <select name="pets" multiple>
                     <optgroup label="Попугаи">
                         <option>Волнистый</option>
@@ -93,22 +99,27 @@
 
         <fieldset>
             <legend>Данные для входа</legend>
-            <label>Логин: <input type="text" name="login" required pattern="[A-Za-z0-9]{5,20}" minlength="5"
-                    maxlength="20"></label><br>
-            <label>Пароль: <input type="password" name="password" required pattern="[A-Za-z0-9]{10,20}" minlength="10"
-                    maxlength="20"></label><br>
+            <input type="text" name="login" required pattern="[A-Za-z0-9]{5,20}" minlength="5" maxlength="20"
+                placeholder="Логин"> text: Только латиница, без пробелов, не менее 5 символов, длина поля 20,
+            обязательное поле) <br>
+            <input type="password" name="password" required pattern="[A-Za-z0-9]{10,20}" minlength="10" maxlength="20"
+                placeholder="Пароль"> password: Только латиница, без пробелов, не менее 10 символов, длина поля 20,
+            обязательное поле, отключить<br>
         </fieldset>
 
         <fieldset>
             <legend>Координаты</legend>
-            <label>Email: <input type="email" name="email" required></label><br>
-            <label>Веб-сайт: <input type="url" name="website"></label><br>
+            <input type="email" name="email" required placeholder="введите адрес почты">email: проверка должна
+            осуществляться при помощи новых атрибутов тега &lt;input&gt;)<br>
+            <input type="url" name="website" placeholder="введите адрес сайта">url: проверка должна осуществляться при
+            помощи новых атрибутов тега &lt;input&gt;<br>
         </fieldset>
 
         <fieldset>
             <legend>Цифры</legend>
-            <label>Число: <input type="number" name="number" min="-2.5" max="2.5" step="0.1"></label><br>
-            <label>Диапазон: <input type="range" name="range" min="1" max="10"></label>
+            <input type="number" name="number" min="-2.5" max="2.5" step="0.1"> number: Диапазон от 2.5 до 2.5 с шагом
+            0.1<br>
+            <input type="range" name="range" min="1" max="10"> range: Максимальное 10 минимальное 1
         </fieldset>
         <fieldset>
             <legend>Кнопки управления</legend>
