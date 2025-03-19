@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+
+    <style>
+        body {
+            height: 1000px;
+        }
+
+        .header {
+            text-align: center;
+            height: 50px;
+            background: lightgreen
+        }
+
+        .menu {
+            width: 200px;
+            height: 300px;
+            background: lightgoldenrodyellow;
+            float: left;
+        }
+
+        .content {
+            background: lightskyblue;
+            margin-left: 200px;
+            margin-right: 200px;
+        }
+
+        .banner {
+            width: 200px;
+            height: 300px;
+            background: lightsalmon;
+            float: right;
+        }
+
+        .footer {
+            height: 50px;
+            background: lightslategray;
+        }
+
+        .clear {
+            clear: both;
+            height: 10px;
+            background: #000000;
+        }
+
+        .wrap {
+            background: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">Пример1</div>
+    <div class="wrap">
+        <div class="menu">
+            <ol>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="exm1.html">Пример1</a></li>
+                <li><a href="exm2.html">Пример2</a></li>
+                <li><a href="../test2.html">Пример3</a></li>
+            </ol>
+        </div>
+        <div class="banner">banner</div>
+        <div class="content">
+            <style>
+                .leftBlock {
+                    width: 20em;
+                    background-color: rgb(255, 0, 0, .45);
+                    padding: .5em;
+                    color: white;
+                    float: left;
+                }
+
+                .article {
+                    background-color: blue;
+                    color: white;
+                }
+            </style>
+            <div class="leftBlock">
+                Левый блок
+            </div>
+
+            <div class="article">
+                Статья 1
+            </div>
+
+            <div class="article">
+                Статья 2
+            </div>
+            <div class="leftBlock">
+                Левый блок
+            </div>
+
+            <div class="article">
+                Статья 1
+            </div>
+
+            <div class="article">
+                Статья 2
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+    <div class="footer">footer</div>
+</body>
+
+</html>

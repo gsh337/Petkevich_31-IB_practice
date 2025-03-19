@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        .container {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: lightblue;
+            border: 10px solid white;
+            margin: 0 auto;
+        }
+
+        .red-rectangle {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+
+        .red-rectangle.bottom {
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .red-rectangle.left {
+            top: 30%;
+            left: 10%;
+            transform: translateY(-50%);
+        }
+
+        .red-rectangle.right {
+            top: 30%;
+            right: 10%;
+            transform: translateY(-50%);
+        }
+
+        .orange-rectangle {
+            width: 150px;
+            height: 150px;
+            background-color: orange;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="red-rectangle bottom"></div>
+        <div class="red-rectangle left"></div>
+        <div class="red-rectangle right"></div>
+        <div class="orange-rectangle"></div>
+    </div>
+</body>
+
+</html>
