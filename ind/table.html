@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+</head>
+
+<body>
+    <table border="1">
+        <tbody>
+            <tr>
+                <th>Заголовок 1</th>
+                <th>Заголовок 2</th>
+                <th>Заголовок 3</th>
+                <th>Заголовок 4</th>
+            </tr>
+            <tr>
+                <td>Ячейка 1</td>
+                <td colspan="2">Ячейка 2</td>
+                <td>Ячейка 3</td>
+            </tr>
+            <tr>
+                <td>Ячейка 4</td>
+                <td colspan="3" rowspan="2">
+                    <table border="1">
+                        <tbody>
+                            <tr>
+                                <th>Заголовок 1<br>Таблицы 2</th>
+                                <th>Заголовок 2<br>Таблицы 2</th>
+                                <th>Заголовок 3<br>Таблицы 2</th>
+                            </tr>
+
+                            <tr>
+                                <td>Ячейка 1<br>Таблицы 2</td>
+                                <td>Ячейка 2<br>Таблицы 2</td>
+                                <td>Ячейка 3<br>Таблицы 2</td>
+                            </tr>
+                            <tr>
+                                <td>Ячейка 4<br>Таблицы 2</td>
+                                <td colspan="2">Ячейка 5<br>Таблицы 2</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>Ячейка 5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

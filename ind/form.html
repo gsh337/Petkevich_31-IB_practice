@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        .scroll-box {
+            width: 150px;
+            height: 100px;
+            overflow-y: auto;
+            border: 1px solid lightgray;
+            margin-top: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <table border="1">
+            <tr>
+                <td rowspan="3">
+                    <button type="button">Кнопка с рисунком</button>
+                </td>
+                <td>Вопрос 1</td>
+                <td><input type="radio" name="question1" value="answer1.1"> Ответ 1.1</td>
+                <td><input type="radio" name="question1" value="answer1.2"> Ответ 1.2</td>
+                <td><input type="radio" name="question1" value="answer1.3"> Ответ 1.3</td>
+            </tr>
+            <tr>
+                <td>Вопрос 2</td>
+                <td colspan="3">
+                    <select name="question2">
+                        <option value="answer2.1">Ответ 2.1</option>
+                        <option value="answer2.2">Ответ 2.2</option>
+                        <option value="answer2.3">Ответ 2.3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Вопрос 3</td>
+                <td colspan="3"><input type="text" name="question3"></td>
+            </tr>
+            <tr>
+                <td rowspan="4">
+                    Дополнительная информация
+                    <div class="scroll-box">
+                        Здесь можно разместить длинный текст,
+                        который будет прокручиваться. <br><br>
+                        Пример содержимого: <br>
+                        - Инструкции <br>
+                        - Подсказки <br>
+                        - Любая другая информация
+                    </div>
+                </td>
+                <td>Вопрос 4</td>
+                <td colspan="3">
+                    <select name="question4" multiple>
+                        <option value="answer4.1">Ответ 4.1</option>
+                        <option value="answer4.2">Ответ 4.2</option>
+                        <option value="answer4.3">Ответ 4.3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Вопрос 5</td>
+                <td colspan="3">
+                    <input type="text" name="question5">
+                    <button type="button">Кнопка</button>
+                </td>
+            </tr>
+            <tr>
+                <td>Вопрос 6</td>
+                <td><input type="checkbox" name="question6" value="answer6.1"> Ответ 6.1</td>
+                <td><input type="checkbox" name="question6" value="answer6.2"> Ответ 6.2</td>
+                <td><input type="checkbox" name="question6" value="answer6.3"> Ответ 6.3</td>
+            </tr>
+            <tr>
+                <td colspan="4">
+                    <button type="submit">Send</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
