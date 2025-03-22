@@ -30,34 +30,47 @@
             display: inline-block;
         }
 
-        .strikethrough span {
+        .line1 {
             text-decoration: line-through;
         }
 
-        .italic {
-            transform: rotate(15deg);
-            font-size: 2em;
+        .line1 .text span:nth-child(odd) {
+            color: red;
+        }
+
+        .line1 .text span:nth-child(even) {
+            color: blue;
+        }
+
+        .line1 .text {
+            white-space: pre-wrap;
+        }
+
+
+        .line2 {
+            text-align: right;
+        }
+
+        .line3 {
             font-style: italic;
+            font-size: 1.5em;
+            writing-mode: vertical-lr;
+            display: inline-block;
         }
 
-        .typewriter {
-            font-family: monospace;
-            white-space: pre-line;
-        }
-
-        .preformatted {
+        .line4 {
             font-family: monospace;
         }
 
-        .no-wrap {
+        .line7 {
+            font-size: large;
             white-space: nowrap;
-            font-size: 2em;
         }
 
-        .small-green {
-            font-family: Courier;
-            font-size: small;
+        .line8 {
+            font-family: Courier, monospace;
             color: green;
+            font-size: small;
         }
     </style>
 </head>
@@ -84,88 +97,38 @@
         </span>
     </h1>
 
-    <div class="dialog">
-        <p class="strikethrough">
-            <span style="color: red;">&mdash;<sup>1</sup> Can I have a double room...</span><br>
-            <span style="color: blue;">&mdash;<sup>2</sup> You can have Room 5, </span>
-            <span style="color: green;">overlooking the sea<sup>верхний индекс</sup></span>
-        </p>
-
-        <p class="italic" style="text-align: right;">
-            &mdash;<sup>3</sup> What does it cost?
-        </p>
-
-        <p class="typewriter">
-            &mdash;<sup>4</sup> 40000 lire a day, not
-            counting the service
-        </p>
-
-        <p class="no-wrap">
-            &mdash;<sup>5</sup> Can I have a look at this room...
-        </p>
-
-        <p class="small-green">
-            &mdash;<sup>6</sup> Yes, <sub>of course</sub>. Come this way
-        </p>
-
-        <p>
-        <pre><span>&mdash;<sup>7</sup> Can you show me something cheaper...</span></pre><br>
-        <span>&mdash;<sup>8</sup> Yes, of course. I won't keep you...</span>
-        </p>
+    <div class="line1">
+        &mdash;<sup>1</sup>
+        <span class="text"><span>Can </span><span>I </span><span>have </span><span>a </span><span>double </span><span>room...</span> </span>
     </div>
 
-    <ul type="none">
-        <li>Пункт 1
-            <ul>
-                <li>Пункт 1.1
-                    <ol type="A">
-                        <li>Пункт 1.1.1
-                            <ul>
-                                <li>Пункт 1.1.1.1</li>
-                                <li>Пункт 1.1.1.2</li>
-                                <li>Пункт 1.1.1.3</li>
-                            </ul>
-                        </li>
-                        <li>Пункт 1.1.2</li>
-                    </ol>
-                </li>
-                <li>Пункт 1.2
-                    <ul type="none">
-                        <li>Пункт 1.2.1
-                            <ul type="none">
-                                <li>Определение пункта 1.2.1</li>
-                                <li>Другое определение пункта 1.2.1</li>
-                            </ul>
-                        </li>
-                        <li>Пункт 1.2.2
-                            <ul type="none">
-                                <li>Определение пункта 1.2.2</li>
-                            </ul>
-                        </li>
-                        <li>Пункт 1.2.3</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li>Пункт 2
-            <ol type="I">
-                <li>Пункт 2.1
-                    <ul style="list-style-type: disc;">
-                        <li>Пункт 2.1.1</li>
-                        <li>Пункт 2.1.2</li>
-                    </ul>
-                </li>
-                <li>Пункт 2.2
-                    <ol type="A">
-                        <li>Пункт 2.2.1</li>
-                        <li>Пункт 2.2.2</li>
-                        <li>Пункт 2.2.3</li>
-                    </ol>
-                </li>
-            </ol>
-        </li>
-    </ul>
+    <div class="line2">
+        &mdash;<sup>2</sup> You can have Room 5, <sup>overlooking the sea</sup>
+    </div>
 
+    <div class="line3">
+        &mdash;<sup>3</sup> What does it cost?
+    </div>
+
+    <div class="line4">
+        &mdash;<sup>4</sup> 40000 lire a day, not<br>counting the service
+    </div>
+
+    <h2 class="line5" style="text-align: center;">
+        &mdash;<sup>5</sup> Can I have a look at this room...
+    </h2>
+
+    <pre class="line6">
+        &mdash;<sup>6</sup> Yes, of course. Come this way
+    </pre>
+
+    <div class="line7">
+        &mdash;<sup>7</sup> Can you show me something cheaper...
+    </div>
+
+    <div class="line8">
+        &mdash;<sup>8</sup> Yes, <sub>of course</sub>. I won't keep you...
+    </div>
 
 </body>
 
